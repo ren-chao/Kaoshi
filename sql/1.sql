@@ -60,11 +60,11 @@ CREATE TABLE `power` (
   `type` int(11) DEFAULT NULL,
   `mbth` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `power` */
 
-insert  into `power`(`id`,`name`,`fid`,`path`,`type`,`mbth`) values (1,'权限基础管理',0,NULL,1,''),(2,'权限信息',1,'ABC/qu?action=seleniu',2,'Quan.js'),(3,'角色信息',1,'ABC/jue?action=selerole',2,'jue.js'),(4,'员工信息',1,'ABC/sta?action=chaniu1',2,'userlist.js'),(5,'新增',4,NULL,3,'<button TYPE=\"button\" lay-event=\"addMenu\"class=\"layui-btn\" >新增用户</button>'),(6,'删除',4,NULL,3,'<button TYPE=\"button\" lay-event=\"delMenu\"class=\"layui-btn\" >删除用户</button>'),(7,'增加',4,NULL,3,'<button TYPE=\"button\" lay-event=\"updataMenu\"class=\"layui-btn\" >修改用户</button>'),(8,'新增权限',2,NULL,3,'<button TYPE=\"button\" lay-event=\"addUser\"class=\"layui-btn\" >新增权限</button>'),(9,'删除权限',2,NULL,3,'<button TYPE=\"button\" lay-event=\"deleUser\"class=\"layui-btn\" >删除权限</button>'),(10,'修改权限',2,NULL,3,'<button TYPE=\"button\" lay-event=\"updataMenu\"class=\"layui-btn\" >修改权限</button>'),(12,'arer阿萨斯',4,'',3,'<button type=\"button\" lay-event=\"dele\" class=\"layui-btn\" lay-filtre=\"deleteuser\">删除</button>'),(14,'分配权限',3,'savffds',3,'<button type=\"button\" lay-event=\"fenFunc\" class=\"layui-btn layui-btn-primary xz\"><i class=\"layui-icon\"></i>分配</button>');
+insert  into `power`(`id`,`name`,`fid`,`path`,`type`,`mbth`) values (1,'权限基础管理',0,NULL,1,''),(2,'权限信息',1,'ABC/qu?action=seleniu',2,'Quan.js'),(3,'角色信息',1,'ABC/jue?action=selerole',2,'jue.js'),(4,'员工信息',1,'ABC/sta?action=chaniu1',2,'userlist.js'),(5,'新增',4,NULL,3,'<button TYPE=\"button\" lay-event=\"addMenu\"class=\"layui-btn\" >新增用户</button>'),(6,'删除',4,NULL,3,'<button TYPE=\"button\" lay-event=\"delMenu\"class=\"layui-btn\" >删除用户</button>'),(7,'增加',4,NULL,3,'<button TYPE=\"button\" lay-event=\"updataMenu\"class=\"layui-btn\" >修改用户</button>'),(8,'新增权限',2,NULL,3,'<button TYPE=\"button\" lay-event=\"addUser\"class=\"layui-btn\" >新增权限</button>'),(9,'删除权限',2,NULL,3,'<button TYPE=\"button\" lay-event=\"deleUser\"class=\"layui-btn\" >删除权限</button>'),(10,'修改权限',2,NULL,3,'<button TYPE=\"button\" lay-event=\"updataMenu\"class=\"layui-btn\" >修改权限</button>'),(12,'arer阿萨斯',4,'',3,'<button type=\"button\" lay-event=\"dele\" class=\"layui-btn\" lay-filtre=\"deleteuser\">删除</button>'),(14,'分配权限',3,'savffds',3,'<button type=\"button\" lay-event=\"fenFunc\" class=\"layui-btn layui-btn-primary xz\"><i class=\"layui-icon\"></i>分配</button>'),(15,'新增部门',18,NULL,3,'<button TYPE=\"button\" lay-event=\"updataMenu\"class=\"layui-btn\" >新增部门</button>'),(16,'删除部门',18,NULL,3,'<button TYPE=\"button\" lay-event=\"updataMenu\"class=\"layui-btn\" >删除部门</button>'),(17,'修改部门',18,NULL,3,'<button TYPE=\"button\" lay-event=\"updataMenu\"class=\"layui-btn\" >部门信息</button>'),(18,'部门信息',1,'ABC/bu?action=SeleBuMenButton',3,'bumen.js');
 
 /*Table structure for table `privilege` */
 
@@ -119,11 +119,11 @@ CREATE TABLE `section` (
   `count` int(11) DEFAULT NULL,
   `address` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `section` */
 
-insert  into `section`(`id`,`name`,`count`,`address`) values (1,'开发部',20,NULL);
+insert  into `section`(`id`,`name`,`count`,`address`) values (1,'开发部',20,NULL),(2,'测试部',20,NULL),(3,'销售部',NULL,NULL),(4,'其他部',NULL,NULL);
 
 /*Table structure for table `staff` */
 
