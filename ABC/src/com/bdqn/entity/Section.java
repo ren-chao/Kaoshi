@@ -4,6 +4,17 @@ public class Section {
 	//≤ø√≈±Ì
 	private int id;
 	private String name;
+	private int count;
+	public int getCount() {
+		return count;
+	}
+	@Override
+	public String toString() {
+		return "Section [id=" + id + ", name=" + name + ", count=" + count + "]";
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	public int getId() {
 		return id;
 	}

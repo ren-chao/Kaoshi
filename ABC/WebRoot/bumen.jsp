@@ -21,12 +21,6 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/dtree.css"  media="all">
-   <link rel="stylesheet" href="<%=basePath %>layui/css/layui.css">
-    <link rel="stylesheet" href="<%=basePath %>css/dtreefont.css">
-	<link rel="stylesheet" href="<%=basePath %>css/public.css" media="all" />
-	<link rel="stylesheet" href="<%=basePath %>dtree/dtree.css">
-  	<link rel="stylesheet" href="<%=basePath %>dtree/font/dtreefont.css">
     
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
@@ -35,7 +29,7 @@
 
 
 <script type="text/javascript" src="lay/dtree.js"></script>
-<script type="text/javascript" src="lay/dtree.js"></script>
+<script type="text/javascript" src="<%=basePath%>lay/dtree.js"></script>
 <!-- <script type="text/javascript" src="lay/userlist.js"></script> -->
 <script type="text/javascript" src="lay/jquery-1.12.4.js"></script>
 <!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
@@ -49,9 +43,6 @@
 		<table id="test"  lay-filter="newsList"></table>
 		</div>
 		
-		
-
-	
 
 </body>
 </html>
