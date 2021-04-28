@@ -8,4 +8,6 @@ import com.bdqn.entity.Section;
 public interface BumenDao {
 	List<Section> selebu();
 	List<Power> selebuton();
+	int updateBumen(Section se);
+	Section seleByid(int id);
 }

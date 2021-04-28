@@ -115,45 +115,30 @@ layui.use(['form','layer','laydate','table','laytpl','dtree'],function(){
 	      break;
 	    };
 	  });
-    
+    //SeleBySection
     //修改用户
     function upUser(userid){
     	layui.layer.open({
     		title : "修改用户信息",
     		type : 2,
-    		content : "par/userInfo.jsp",
+    		content : "par/bumen.jsp",
     		area:['400px','540px'],
     		success:function(layero, index){//seleuser
     			$.ajax({
-    				url:"http://localhost:8080/ABC/sta?action=seleuser",
+    				url:"http://localhost:8080/ABC/bu?action=SeleBySection",
     				type:"post",
     				async: false,
     				data:{"userid":userid},
     				success:function(data){
-    					
     					var info = eval('(' + data + ')');
           				var body = layui.layer.getChildFrame('body', index);
-    					body.find("#uname").val(info[0].name);//hi
-    					body.find("#hi").val(info[0].id);//hi
+    					body.find("#logname").val(info.name);//hi
+    					body.find("#count").val(info.count);//hi
+    					body.find("#hi").val(info.id);
     					/*  ------下拉框赋值-------*/-
     					setTimeout(function() {
-    						$.ajax({
-        						url:"http://localhost:8080/ABC/sta?action=seleuser",
-        						type:"post",
-        						async: false,
-        						data:{"userid":userid},
-        						success:function(data){
-        							//[{"id":3,"name":"520","rankid":1,"roleid":1,"sectionid":1}]
-        							var info2 = eval("("+data+")")
-        							var select = 'dd[lay-value="'+ info2[0].rankid +'"]';
-        							var select1 = 'dd[lay-value="'+ info2[0].roleid +'"]';
-        							var select2 = 'dd[lay-value="'+ info2[0].sectionid +'"]';
-        							body.find("#role1").siblings("div.layui-form-select").find('dl').find(select).click();	//菜单样式
-        							body.find("#role2").siblings("div.layui-form-select").find('dl').find(select1).click();	//菜单样式
-        							body.find("#role3").siblings("div.layui-form-select").find('dl').find(select2).click();	//菜单样式
-        						}
-        					})
-    					}, 100)
+    					
+    					})
     					
     				}
     			})

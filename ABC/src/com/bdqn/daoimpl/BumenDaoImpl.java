@@ -21,4 +21,16 @@ public class BumenDaoImpl extends BaseDao implements BumenDao{
 		return this.queryForList(Power.class, sql);
 	}
 
+	@Override
+	public int updateBumen(Section se) {
+		String sql="UPDATE `section` SET NAME=?,`count`=? WHERE id=?";
+		return this.update(sql, se.getName(),se.getCount(),se.getId());
+	}
+
+	@Override
+	public Section seleByid(int id) {
+		String sql="SELECT * FROM `section` WHERE id=?";
+		return this.queryForOne(Section.class, sql, id);
+	}
+
 }

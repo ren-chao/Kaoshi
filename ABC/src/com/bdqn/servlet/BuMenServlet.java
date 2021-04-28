@@ -38,4 +38,18 @@ public class BuMenServlet extends Abservlet {
     		request.setAttribute("chazhi",selebuton);
     		request.getRequestDispatcher("bumen.jsp").forward(request,response);
     }
+    //根据id查询当前部门的数据
+    public void SeleBySection(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+    		Section seleByid = bu.seleByid(Integer.parseInt(request.getParameter("userid")));
+    		PrintUtil.write(seleByid, response);
+    }
+    public void UpdatSe(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+    	Section se=new Section();
+    	se.setName(request.getParameter("loginname"));
+    	se.setId(Integer.parseInt(request.getParameter("id")));
+    	se.setCount(Integer.parseInt(request.getParameter("coutn")));
+    	PrintUtil.write(bu.updateBumen(se), response);
+    }
 }	
